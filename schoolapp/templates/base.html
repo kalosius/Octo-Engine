@@ -305,7 +305,7 @@
     <header class="bg-white shadow-md sticky top-0 z-50">
       <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
           <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-              <a href="index.html" class="flex items-center">
+              <a href="{% url 'home' %}" class="flex items-center">
                   <img src="th.png" class="mr-3 h-12 sm:h-14" alt="School Logo">
                   <div>
                       <span class="self-center text-sm font-semibold whitespace-nowrap text-[#b28449]">ST.Francis Senior Secondary School</span>
@@ -325,7 +325,7 @@
               <div class="justify-between items-center w-full lg:flex lg:w-auto lg:order-1 hidden" id="mobile-menu-2">
                   <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                       <li>
-                          <a href="index.html" class="block py-2 pr-4 pl-3 text-[#b28449] border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#b28449]-700 lg:p-0" aria-current="page">Home</a>
+                          <a href="{% url 'home' %}" class="block py-2 pr-4 pl-3 text-[#b28449] border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#b28449]-700 lg:p-0" aria-current="page">Home</a>
                       </li>
                       <li class="relative group">
                           <button class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#b28449]-700 lg:p-0 lg:w-auto">
@@ -338,10 +338,10 @@
                           <div class="absolute left-0 z-10 hidden group-hover:block font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 transition-all duration-300 ease-in-out">
                               <ul class="py-2 text-sm text-gray-700">
                                   <li>
-                                      <a href="abouthistory.html" class="block px-4 py-2 hover:bg-gray-100">History</a>
+                                      <a href="{% url 'about' %}" class="block px-4 py-2 hover:bg-gray-100">History</a>
                                   </li>
                                   <li>
-                                      <a href="schooladmin.html" class="block px-4 py-2 hover:bg-gray-100">School Administration</a>
+                                      <a href="{% url 'schooladmin' %}" class="block px-4 py-2 hover:bg-gray-100">School Administration</a>
                                   </li>
                               </ul>
                           </div>
@@ -357,10 +357,10 @@
                           <div class="absolute left-0 z-10 hidden group-hover:block font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 transition-all duration-300 ease-in-out">
                               <ul class="py-2 text-sm text-gray-700">
                                   <li>
-                                      <a href="unebperformance.html" class="block px-4 py-2 hover:bg-gray-100">Uneb Performance</a>
+                                      <a href="{% url 'unebperformance' %}" class="block px-4 py-2 hover:bg-gray-100">Uneb Performance</a>
                                   </li>
                                   <li>
-                                      <a href="beststudents.html" class="block px-4 py-2 hover:bg-gray-100">Uneb Best Students</a>
+                                      <a href="{% url 'beststudents' %}" class="block px-4 py-2 hover:bg-gray-100">Uneb Best Students</a>
                                   </li>
                               </ul>
                           </div>
@@ -379,94 +379,28 @@
                           <div class="absolute left-0 z-10 hidden group-hover:block font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 transition-all duration-300 ease-in-out">
                               <ul class="py-2 text-sm text-gray-700">
                                   <li>
-                                      <a href="clubsandactivities.html" class="block px-4 py-2 hover:bg-gray-100">Clubs &amp; Activities</a>
+                                      <a href="{% url 'clubsandactivities' %}" class="block px-4 py-2 hover:bg-gray-100">Clubs &amp; Activities</a>
                                   </li>
                                   <li>
-                                      <a href="gamesports.html" class="block px-4 py-2 hover:bg-gray-100">Games &amp; Sports</a>
+                                      <a href="{% url 'gamesports' %}" class="block px-4 py-2 hover:bg-gray-100">Games &amp; Sports</a>
                                   </li>
                                   <li>
-                                      <a href="gallery.html" class="block px-4 py-2 hover:bg-gray-100">Gallery</a>
+                                      <a href="{% url 'gallery' %}" class="block px-4 py-2 hover:bg-gray-100">Gallery</a>
                                   </li>
                               </ul>
                           </div>
                       </li>
                       <li>
-                          <a href="events.html" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#b28449]-700 lg:p-0">Events</a>
+                          <a href="{% url 'events' %}" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#b28449]-700 lg:p-0">Events</a>
                       </li>
                       <li>
-                          <a href="contact.html" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#b28449]-700 lg:p-0">Contact</a>
+                          <a href="{% url 'contact' %}" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#b28449]-700 lg:p-0">Contact</a>
                       </li>
                   </ul>
               </div>
           </div>
       </nav>
   </header>
-
-
-<!-- carousel items -->
-<div id="default-carousel" class="relative w-full h-screen" data-carousel="slide">
-  <!-- Carousel wrapper -->
-  <div class="relative h-full overflow-hidden rounded-lg">
-                      <div class="block duration-700 ease-in-out absolute inset-0 transition-transform transform -translate-x-full z-10" data-carousel-item="">
-              <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
-              <!-- Adjusted Image for Brightness, Contrast, and Saturation -->
-              <img src="capuchinsisters.jpeg" class="absolute block w-full h-full object-cover object-center brightness-110 contrast-125 saturate-150 transition-transform duration-700 ease-in-out hover:scale-105" alt="Welcome to Mityana Secondary School">
-              <div class="absolute inset-0 flex items-center justify-center z-20">
-                  <div class="text-center text-white px-4">
-                      <h2 class="text-2xl md:text-2xl font-bold mb-4 animate-fadeIn shadow-text">Welcome to ST.Francis Senior Secondary School</h2>
-                      <p class="text-xl md:text-2xl animate-slideInFromLeft shadow-text">Empowering Future Leaders Since 1980</p>
-                  </div>
-              </div>
-          </div>
-                      <div class="duration-700 ease-in-out absolute inset-0 transition-transform transform translate-x-0 z-20" data-carousel-item="">
-              <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
-              <!-- Adjusted Image for Brightness, Contrast, and Saturation -->
-              <img src="capuchins.jpeg" class="absolute block w-full h-full object-cover object-center brightness-110 contrast-125 saturate-150 transition-transform duration-700 ease-in-out hover:scale-105" alt="State-of-the-Art Facilities">
-              <div class="absolute inset-0 flex items-center justify-center z-20">
-                  <div class="text-center text-white px-4">
-                      <h2 class="text-2xl md:text-2xl font-bold mb-4 animate-fadeIn shadow-text">State-of-the-Art Facilities</h2>
-                      <p class="text-xl md:text-2xl animate-slideInFromLeft shadow-text">Providing the Best Learning Environment</p>
-                  </div>
-              </div>
-          </div>
-                      <div class="duration-700 ease-in-out absolute inset-0 transition-transform transform z-10 translate-x-full" data-carousel-item="">
-              <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
-              <!-- Adjusted Image for Brightness, Contrast, and Saturation -->
-              <img src="quadrangle.jpeg" class="absolute block w-full h-full object-cover object-center brightness-110 contrast-125 saturate-150 transition-transform duration-700 ease-in-out hover:scale-105" alt="Diverse Student Body">
-              <div class="absolute inset-0 flex items-center justify-center z-20">
-                  <div class="text-center text-white px-4">
-                      <h2 class="text-2xl md:text-2xl font-bold mb-4 animate-fadeIn shadow-text">Diverse Student Body</h2>
-                      <p class="text-xl md:text-2xl animate-slideInFromLeft shadow-text">Fostering a Global Perspective</p>
-                  </div>
-              </div>
-          </div>
-              </div>
-  
-  <!-- Slider indicators -->
-  <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-                      <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                      <button type="button" class="w-3 h-3 rounded-full bg-white dark:bg-gray-800" aria-current="true" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                      <button type="button" class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-              </div>
-
-  <!-- Slider controls -->
-  <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev="">
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-          <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"></path>
-          </svg>
-          <span class="sr-only">Previous</span>
-      </span>
-  </button>
-  <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next="">
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
-          <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"></path>
-          </svg>
-          <span class="sr-only">Next</span>
-      </span>
-  </button>
-</div>
 
 
 {% block content %}
@@ -497,8 +431,8 @@
             <div>
                 <h4 class="text-xl font-bold mb-6">Quick Links</h4>
                 <ul class="space-y-3">
-                    <li><a href="#about" class="text-[#ffffff] hover:text-white transition duration-300">About Us</a></li>
-                    <li><a href="#admissions" class="text-[#ffffff] hover:text-white transition duration-300">Admissions</a></li>
+                    <li><a href="{% url 'about' %}" class="text-[#ffffff] hover:text-white transition duration-300">About Us</a></li>
+                    <li><a href="{% url 'admissions' %}" class="text-[#ffffff] hover:text-white transition duration-300">Admissions</a></li>
                     <li><a href="#academics" class="text-[#ffffff] hover:text-white transition duration-300">Academic Programs</a></li>
                     <li><a href="#student-life" class="text-[#ffffff] hover:text-white transition duration-300">Student Life</a></li>
                     <li><a href="#news" class="text-[#ffffff] hover:text-white transition duration-300">News &amp; Events</a></li>
