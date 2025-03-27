@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+  .shadow-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  @keyframes  pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  .animate-pulse {
+    animation: pulse 3s infinite;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+</style>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ST.Francis Senior Secondary School - Sapientia crucis Developed by Aloisius Kasozi">
+  <meta name="keywords" content="ST.Francis Senior Secondary School, Sapientia crucis, Busunju, Uganda">
+  <meta name="author" content="Aloisius Kasozi">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  <meta name="msvalidate.01" content="A7 3D 4D 5E 6F 7G 8H 9I 10J 11K 12L 13M 14N 15O 16P 17Q 18R 19S 20T 21U 22V 23W 24X 25Y 26Z">
+  <meta name="yandex-verification" content="A7 3D 4D 5E 6F 7G 8H 9I 10J 11K 12L 13M 14N 15O 16P 17Q 18R 19S 20T 21U 22V 23W 24X 25Y 26Z">
+  <meta name="apple-mobile-web-app-title" content="ST.Francis Senior Secondary School">
+  <meta name="application-name" content="ST.Francis Senior Secondary School">
+  <meta name="msapplication-TileColor" content="#ec1a23">
+  <meta name="theme-color" content="#ec1a23">
+  <meta property="og:title" content="ST.Francis Senior Secondary School - Sapientia crucis">
+  <meta property="og:description" content="ST.Francis Senior Secondary School - Sapientia crucis">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stfranciss.netlify.app">
+  <meta property="og:image" content="https://stfranciss.netlify.app/th.png">
+  <meta property="og:image:alt" content="ST.Francis Senior Secondary School - Sapientia crucis">
+  <meta property="og:site_name" content="ST.Francis Senior Secondary School - Sapientia crucis">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="en_UG">
+
+  <title> ST.Francis Senior Secondary School - Sapientia crucis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- favicon link below -->
+  <link rel="apple-touch-icon" sizes="180x180" href="th.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="th.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="th.png">
+  <link rel="mask-icon" href="th.png" color="#ec1a23">
+
+  <link rel="icon" href="th.png" type="image/png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+   <!-- link tailwindcss -->
+   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+ <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+ <script>
+  tailwind.config = {
+      theme: {
+          extend: {
+              colors: {
+                  primary: '#069546', // Green
+                  secondary: '#fff000', // Yellow
+                  accent: '#ec1a23', // Red
+                  highlight: '#00acee', // Blue
+              },
+              fontFamily: {
+                      sans: ['Inter', 'sans-serif'],
+                  },
+          }
+      }
+  }
+</script>
+  <style>
+      @import  url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap');
+      
+      /* * {
+          font-family: "Poppins", sans-serif;
+
+          font-size: 16px;
+      }
+
+      body {
+          font-weight: 500; 
+      } */
+      .scroll-smooth {
+              scroll-behavior: smooth;
+          }
+      .hero-pattern {
+          background-color: #ec1a23;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.12'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+      
+      .text-gray-600{
+          color: black;
+      }
+
+      .news-date {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+      }
+      
+      .hover-scale {
+          transition: transform 0.3s ease-in-out;
+      }
+      
+      .hover-scale:hover {
+          transform: scale(1.05);
+      }
+
+      /* New animations */
+      @keyframes  fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+      }
+
+      @keyframes  slideInFromLeft {
+          from { transform: translateX(-100%); opacity: 0; }
+          to { transform: translateX(0); opacity: 1; }
+      }
+
+      @keyframes  slideInFromRight {
+          from { transform: translateX(100%); opacity: 0; }
+          to { transform: translateX(0); opacity: 1; }
+      }
+
+      .animate-fadeIn {
+          animation: fadeIn 1s ease-out;
+      }
+
+      .animate-slideInFromLeft {
+          animation: slideInFromLeft 1s ease-out;
+      }
+
+      .animate-slideInFromRight {
+          animation: slideInFromRight 1s ease-out;
+      }
+      .owl-nav button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #ec1a23 !important;
+      color: white !important;
+      padding: 10px !important;
+      border-radius: 50% !important;
+  }
+  .owl-nav button:hover {
+      background: #d11520 !important;
+  }
+  .owl-prev {
+      left: -30px;
+  }
+  .owl-next {
+      right: -30px;
+  }
+  .owl-dots .owl-dot span {
+      background: #ccc !important;
+  }
+  .owl-dots .owl-dot.active span {
+      background: #ec1a23 !important;
+  }
+  .event-card {
+      max-width: 350px;
+      margin: 0 auto;
+  }
+  @media (max-width: 640px) {
+      .owl-nav {
+          display: none;
+      }
+  }
+  </style>
+  <style>
+
+      /* important */
+      .bannerFondo{
+        height: 400px;
+}
+/* end important */
+
+
+      .group:hover .group-hover\:block {
+        display: block;
+        z-index: 1 !important;
+      }
+      .group:hover .group-hover\:rotate-180 {
+        transform: rotate(180deg);
+      }
+      .transition-transform {
+        transition: transform 0.3s ease;
+      }
+      .carousel {
+        position: relative;
+        overflow: hidden;
+      }
+      .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      .carousel-item {
+        min-width: 100%;
+        box-sizing: border-box;
+        position: relative;
+      }
+      .carousel-item img {
+        width: 100%;
+        height: 400px; /* Set a fixed height for all images */
+        object-fit: cover;
+      }
+      .carousel-text {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .carousel-control {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .carousel-control.prev {
+        left: 10px;
+      }
+      .carousel-control.next {
+        right: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="bg-[#b28449] text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center py-3 text-sm">
+                <div class="flex flex-wrap justify-center md:justify-start items-center space-x-6 md:space-x-8">
+                    <div class="flex items-center group">
+                        <div class="bg-[#b28449] p-2 rounded-full mr-2">
+                            <i class="fas fa-map-marker-alt text-secondary"></i>
+                        </div>
+                        <span class="group-hover:text-secondary transition-colors">P.O Box 22551, Kampala-Uganda</span>
+                    </div>
+                    <div class="flex items-center group">
+                        <div class="bg-[#b28449] p-2 rounded-full mr-2">
+                            <i class="fas fa-phone text-secondary"></i>
+                        </div>
+                        <span class="group-hover:text-secondary transition-colors">0773115506 | 0705095494</span>
+                    </div>
+                    <div class="flex items-center group">
+                        <div class="bg-[#b28449] p-2 rounded-full mr-2">
+                            <i class="fas fa-envelope text-secondary"></i>
+                        </div>
+                        <span class="group-hover:text-secondary transition-colors">stfranciss@gmail.com</span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-6 mt-3 md:mt-0">
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-secondary hover:text-white transition-colors transform hover:scale-110">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="text-secondary hover:text-white transition-colors transform hover:scale-110">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="text-secondary hover:text-white transition-colors transform hover:scale-110">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="text-secondary hover:text-white transition-colors transform hover:scale-110">
+                            <i class="fab fa-youtube text-lg"></i>
+                        </a>
+                        <a href="#" class="text-secondary hover:text-white transition-colors transform hover:scale-110">
+                            <i class="fab fa-linkedin-in text-lg"></i>
+                        </a>
+                    </div>
+                <!-- For large screens (Staff Login) -->
+                <div class="border-l border-secondary pl-6 hidden md:block">
+                    <a href="https://register-ylyd.onrender.com/admin/login/?next=/admin/" class="bg-secondary text-[#b28449] px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors">
+                        Staff Login
+                    </a>
+                </div>
+    
+                <!-- For small screens (Apply Now) -->
+                <a href="https://register-ylyd.onrender.com/" class="bg-secondary text-[#b28449] px-4 py-2 rounded-lg font-semibold hover:bg-white transition-colors block md:hidden">
+                    Apply Now  →
+                </a>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+  
+      <!-- component of the nav bar -->
+      <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
+            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+                <a href="index.html" class="flex items-center">
+                    <img src="th.png" class="mr-3 h-12 sm:h-14" alt="School Logo">
+                    <div>
+                        <span class="self-center text-sm font-semibold whitespace-nowrap text-[#b28449]">ST.Francis Senior Secondary School</span>
+                        <p class="text-sm text-gray-600 italic">"Sapientia crucis</p>
+                    </div>                
+                </a>
+                <div class="flex items-center lg:order-2">
+                    <a href="https://register-ylyd.onrender.com/" class="text-white bg-[#b28449] hover:bg-accent focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 focus:outline-none transition duration-300 hidden md:inline-block">
+                        Apply Now  →
+                    </a>
+                    <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu-2" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                <div class="justify-between items-center w-full lg:flex lg:w-auto lg:order-1 hidden" id="mobile-menu-2">
+                    <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                        <li>
+                            <a href="index.html" class="block py-2 pr-4 pl-3 text-[#b28449] border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#b28449]-700 lg:p-0" aria-current="page">Home</a>
+                        </li>
+                        <li class="relative group">
+                            <button class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#b28449]-700 lg:p-0 lg:w-auto">
+                                About 
+                                <svg class="w-2.5 h-2.5 ml-2.5 transition-transform group-hover:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div class="absolute left-0 z-10 hidden group-hover:block font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 transition-all duration-300 ease-in-out">
+                                <ul class="py-2 text-sm text-gray-700">
+                                    <li>
+                                        <a href="abouthistory.html" class="block px-4 py-2 hover:bg-gray-100">History</a>
+                                    </li>
+                                    <li>
+                                        <a href="schooladmin.html" class="block px-4 py-2 hover:bg-gray-100">School Administration</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="relative group">
+                            <button class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#b28449]-700 lg:p-0 lg:w-auto">
+                                Academics 
+                                <svg class="w-2.5 h-2.5 ml-2.5 transition-transform group-hover:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div class="absolute left-0 z-10 hidden group-hover:block font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 transition-all duration-300 ease-in-out">
+                                <ul class="py-2 text-sm text-gray-700">
+                                    <li>
+                                        <a href="unebperformance.html" class="block px-4 py-2 hover:bg-gray-100">Uneb Performance</a>
+                                    </li>
+                                    <li>
+                                        <a href="beststudents.html" class="block px-4 py-2 hover:bg-gray-100">Uneb Best Students</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="admissions.html" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#b28449]-700 lg:p-0">Admissions</a>
+                        </li>
+                        <li class="relative group">
+                            <button class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#b28449]-700 lg:p-0 lg:w-auto">
+                                Student Life 
+                                <svg class="w-2.5 h-2.5 ml-2.5 transition-transform group-hover:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"></path>
+                                </svg>
+                            </button>
+                            <!-- Dropdown menu -->
+                            <div class="absolute left-0 z-10 hidden group-hover:block font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 transition-all duration-300 ease-in-out">
+                                <ul class="py-2 text-sm text-gray-700">
+                                    <li>
+                                        <a href="clubsandactivities.html" class="block px-4 py-2 hover:bg-gray-100">Clubs &amp; Activities</a>
+                                    </li>
+                                    <li>
+                                        <a href="gamesports.html" class="block px-4 py-2 hover:bg-gray-100">Games &amp; Sports</a>
+                                    </li>
+                                    <li>
+                                        <a href="gallery.html" class="block px-4 py-2 hover:bg-gray-100">Gallery</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="events.html" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#b28449]-700 lg:p-0">Events</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-[#b28449]-700 lg:p-0">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+<!-- abouthistory -->
+<header class="bg-[#b28449] text-white py-8 shadow-lg">
+    <div class="container mx-auto px-4">
+        <h1 class="text-2xl font-bold text-center">The Rich History of ST.Francis Senior Secondary School</h1>
+    </div>
+</header>
+
+<!-- history info -->
+<main class="container mx-auto px-4 py-12">
+    <!-- Introduction -->
+    <section class="mb-16 bg-white rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition duration-300">
+        <h2 class="text-2xl md:text-2xl font-bold mb-6 text-[#b28449]">Our Heritage</h2>
+        <p class="text-gray-700 leading-relaxed text-md text-justify">
+            ST.Francis Secondary School was founded in 1909 through a joint effort between the Buganda Kingdom and the Church Missionary Society United Kingdoms, led by Venerable Rev. Harry Bowers and Ssingo County Chief Owek. Paul Nsubuga Bakunga. Initially a boys' school, it has undergone several transformations, including the construction of its first permanent building on 27th March 1937, promotion to ST.Francis Secondary School status, and the admission of the first female students. On 30th July 1947, it was recognized by British Prime Minister Winston Churchill for its contributions to cotton production during World War II. The first science laboratory was opened by Sir Andrew Cohen on 10th October 1953, followed by the inauguration of the Boys' Hostel and the primary section's new site by the King of Buganda on 6th September 1958. It became a government-aided secondary school in 1978, attained Advanced Level status in 1982, and marked its 85th anniversary with the opening of the Old Students’ Library by King Ronald Muwenda Mutebi II on 5th October 1994. The computer center and main hall were opened in 1999 by the Minister of Education and Sports to celebrate the 90th anniversary, leading up to the centenary celebration on 19th September 2009
+        </p>
+    </section>
+
+    <!-- Timeline -->
+    <section class="mb-20">
+        <h2 class="text-2xl md:text-2xl font-bold mb-12 text-center text-[#b28449]">Journey Through Time</h2>
+        <div class="relative wrap overflow-hidden p-4 md:p-10">
+            <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border left-1/2 transform -translate-x-1/2"></div>
+
+            <!-- 1909: Foundation -->
+            <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                <div class="order-1 w-5/12"></div>
+                <div class="z-20 flex items-center order-1 bg-[#b28449] shadow-xl w-12 h-12 rounded-full">
+                    <h1 class="mx-auto font-semibold text-md text-white">1909</h1>
+                </div>
+                <div class="order-1 bg-gray-white rounded-lg shadow-xl w-5/12 px-6 py-4 hover:bg-gray-200 transition duration-300">
+                    <h3 class="mb-3 font-bold text-[#b28449] text-xl">Foundation</h3>
+                    <p class="text-sm md:text-base leading-snug tracking-wide text-gray-700">ST.Francis Secondary School is established as a joint venture between Buganda Kingdom and the Church Missionary Society.</p>
+                </div>
+            </div>
+
+            <!-- 1937: First Permanent Building -->
+            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                <div class="order-1 w-5/12"></div>
+                <div class="z-20 flex items-center order-1 bg-secondary shadow-xl w-12 h-12 rounded-full">
+                    <h1 class="mx-auto font-semibold text-md text-white">1937</h1>
+                </div>
+                <div class="order-1 bg-gray-white rounded-lg shadow-xl w-5/12 px-6 py-4 hover:bg-gray-200 transition duration-300">
+                    <h3 class="mb-3 font-bold text-secondary text-xl">First Permanent Building</h3>
+                    <p class="text-sm md:text-base leading-snug tracking-wide text-gray-700">The school gets its first permanent building, marking a significant milestone in its physical development.</p>
+                </div>
+            </div>
+
+            <!-- 1947: Recognition by Winston Churchill -->
+            <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                <div class="order-1 w-5/12"></div>
+                <div class="z-20 flex items-center order-1 bg-accent shadow-xl w-12 h-12 rounded-full">
+                    <h1 class="mx-auto font-semibold text-md text-white">1947</h1>
+                </div>
+                <div class="order-1 bg-gray-white rounded-lg shadow-xl w-5/12 px-6 py-4 hover:bg-gray-200 transition duration-300">
+                    <h3 class="mb-3 font-bold text-accent text-xl">Churchill's Recognition</h3>
+                    <p class="text-sm md:text-base leading-snug tracking-wide text-gray-700">Recognized by Prime Minister Winston Churchill as the best school in growing cotton to support World War II efforts.</p>
+                </div>
+            </div>
+
+            <!-- 1978: Government-Aided Status -->
+            <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                <div class="order-1 w-5/12"></div>
+                <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-12 h-12 rounded-full">
+                    <h1 class="mx-auto font-semibold text-md text-white">1978</h1>
+                </div>
+                <div class="order-1 bg-gray-white rounded-lg shadow-xl w-5/12 px-6 py-4 hover:bg-gray-200 transition duration-300">
+                    <h3 class="mb-3 font-bold text-gray-800 text-xl">Government-Aided Status</h3>
+                    <p class="text-sm md:text-base leading-snug tracking-wide text-gray-700">The school becomes a government-aided secondary school, expanding its reach and resources.</p>
+                </div>
+            </div>
+
+            <!-- 2009: Centenary Celebration -->
+            <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                <div class="order-1 w-5/12"></div>
+                <div class="z-20 flex items-center order-1 bg-[#b28449] shadow-xl w-12 h-12 rounded-full">
+                    <h1 class="mx-auto font-semibold text-md text-white">2009</h1>
+                </div>
+                <div class="order-1 bg-gray-white rounded-lg shadow-xl w-5/12 px-6 py-4 hover:bg-gray-200 transition duration-300">
+                    <h3 class="mb-3 font-bold text-[#b28449] text-xl">Centenary Celebration</h3>
+                    <p class="text-sm md:text-base leading-snug tracking-wide text-gray-700">ST.Francis Secondary School celebrates its 100th anniversary, marking a century of educational excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container mx-auto px-4 py-8">
+        <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">The head teachers of ST.Francis Secondary School  since 1909</h2>
+        
+        <div class="mb-4">
+          <input type="text" id="searchInput" placeholder="Search for a head teacher..." class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+      
+        <div class="overflow-x-auto bg-white rounded-lg shadow overflow-y-auto relative" style="max-height: 600px;">
+          <table class="border-collapse table-auto w-full whitespace-no-wrap bg-white table-striped relative">
+            <thead>
+              <tr class="text-left">
+                <th class="bg-gray-100 sticky top-0 border-b border-gray-200 px-6 py-3 text-gray-600 font-bold tracking-wider uppercase text-xs">No.</th>
+                <th class="bg-gray-100 sticky top-0 border-b border-gray-200 px-6 py-3 text-gray-600 font-bold tracking-wider uppercase text-xs">Name of Head Teacher</th>
+                <th class="bg-gray-100 sticky top-0 border-b border-gray-200 px-6 py-3 text-gray-600 font-bold tracking-wider uppercase text-xs">Year</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"><tr class="bg-gray-50 hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">1</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Venerable Harry Bowers</td>
+              <td class="border-t border-gray-200 px-6 py-4">1909 - 1913</td>
+            </tr><tr class="hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">2</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. Yosiya Katumba</td>
+              <td class="border-t border-gray-200 px-6 py-4">1913 – 1918</td>
+            </tr><tr class="bg-gray-50 hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">3</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. Suleman Bafirawala</td>
+              <td class="border-t border-gray-200 px-6 py-4">1918 (3 months)</td>
+            </tr><tr class="hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">4</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. Ananiyasi Jjuuko Binaisa</td>
+              <td class="border-t border-gray-200 px-6 py-4">1918 - 1920</td>
+            </tr><tr class="bg-gray-50 hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">5</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. Asafio Kivumbi</td>
+              <td class="border-t border-gray-200 px-6 py-4">1920 – 1922</td>
+            </tr><tr class="hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">6</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. Eriya B. Matovu</td>
+              <td class="border-t border-gray-200 px-6 py-4">1922 - 1929</td>
+            </tr><tr class="bg-gray-50 hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">7</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. Festo Ssemakula</td>
+              <td class="border-t border-gray-200 px-6 py-4">1929 – 1932</td>
+            </tr><tr class="hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">8</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Rev. W.B Cole</td>
+              <td class="border-t border-gray-200 px-6 py-4">1933 – 1934</td>
+            </tr><tr class="bg-gray-50 hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">9</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. A. L. Kasozi</td>
+              <td class="border-t border-gray-200 px-6 py-4">1934 - 1937</td>
+            </tr><tr class="hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">10</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. Saul Lubega</td>
+              <td class="border-t border-gray-200 px-6 py-4">1938 – 1956</td>
+            </tr><tr class="bg-gray-50 hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">11</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. Edward N.K. Kaweere</td>
+              <td class="border-t border-gray-200 px-6 py-4">1957 - 1977</td>
+            </tr><tr class="hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">12</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. Kazibwe Charles</td>
+              <td class="border-t border-gray-200 px-6 py-4">1978 – 1983</td>
+            </tr><tr class="bg-gray-50 hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">13</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. Nyanzi Elijah Moses</td>
+              <td class="border-t border-gray-200 px-6 py-4">1983 – 1984</td>
+            </tr><tr class="hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">14</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. Mukiibi Fredrick Musisi</td>
+              <td class="border-t border-gray-200 px-6 py-4">1985 – 1986</td>
+            </tr><tr class="bg-gray-50 hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">15</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. Nsumba Robinson Lyazi</td>
+              <td class="border-t border-gray-200 px-6 py-4">1986 – 2000</td>
+            </tr><tr class="hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">16</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. Musuuza Godfrey Kiwanuka Ssalongo</td>
+              <td class="border-t border-gray-200 px-6 py-4">2000 – 2008</td>
+            </tr><tr class="bg-gray-50 hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">17</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Rev. Canon Eriezah Kabona Sseronjogi Ssalongo</td>
+              <td class="border-t border-gray-200 px-6 py-4">2009 - 2012</td>
+            </tr><tr class="hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">18</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. Nsereko Sammy</td>
+              <td class="border-t border-gray-200 px-6 py-4">2013 - 2023</td>
+            </tr><tr class="bg-gray-50 hover:bg-gray-100">
+              <td class="border-t border-gray-200 px-6 py-4">19</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">Mr. Kiwanuka Samuel</td>
+              <td class="border-t border-gray-200 px-6 py-4">2024 - date</td>
+            </tr></tbody>
+          </table>
+        </div>
+      </div>
+      
+      <script>
+        const headTeachers = [
+          { number: 1, name: "Venerable Harry Bowers", year: "1909 - 1913" },
+          { number: 2, name: "Mr. Yosiya Katumba", year: "1913 – 1918" },
+          { number: 3, name: "Mr. Suleman Bafirawala", year: "1918 (3 months)" },
+          { number: 4, name: "Mr. Ananiyasi Jjuuko Binaisa", year: "1918 - 1920" },
+          { number: 5, name: "Mr. Asafio Kivumbi", year: "1920 – 1922" },
+          { number: 6, name: "Mr. Eriya B. Matovu", year: "1922 - 1929" },
+          { number: 7, name: "Mr. Festo Ssemakula", year: "1929 – 1932" },
+          { number: 8, name: "Rev. W.B Cole", year: "1933 – 1934" },
+          { number: 9, name: "Mr. A. L. Kasozi", year: "1934 - 1937" },
+          { number: 10, name: "Mr. Saul Lubega", year: "1938 – 1956" },
+          { number: 11, name: "Mr. Edward N.K. Kaweere", year: "1957 - 1977" },
+          { number: 12, name: "Mr. Kazibwe Charles", year: "1978 – 1983" },
+          { number: 13, name: "Mr. Nyanzi Elijah Moses", year: "1983 – 1984" },
+          { number: 14, name: "Mr. Mukiibi Fredrick Musisi", year: "1985 – 1986" },
+          { number: 15, name: "Mr. Nsumba Robinson Lyazi", year: "1986 – 2000" },
+          { number: 16, name: "Mr. Musuuza Godfrey Kiwanuka Ssalongo", year: "2000 – 2008" },
+          { number: 17, name: "Rev. Canon Eriezah Kabona Sseronjogi Ssalongo", year: "2009 - 2012" },
+          { number: 18, name: "Mr. Nsereko Sammy", year: "2013 - 2023" },
+          { number: 19, name: "Mr. Kiwanuka Samuel", year: "2024 - date" }
+        ];
+      
+        function renderTable(data) {
+          const tableBody = document.getElementById('tableBody');
+          tableBody.innerHTML = '';
+          data.forEach((teacher, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td class="border-t border-gray-200 px-6 py-4">${teacher.number}</td>
+              <td class="border-t border-gray-200 px-6 py-4 font-medium">${teacher.name}</td>
+              <td class="border-t border-gray-200 px-6 py-4">${teacher.year}</td>
+            `;
+            row.className = index % 2 === 0 ? 'bg-gray-50 hover:bg-gray-100' : 'hover:bg-gray-100';
+            tableBody.appendChild(row);
+          });
+        }
+      
+        function searchTable() {
+          const searchInput = document.getElementById('searchInput');
+          const filter = searchInput.value.toLowerCase();
+          const filteredData = headTeachers.filter(teacher => 
+            teacher.name.toLowerCase().includes(filter) || 
+            teacher.year.toLowerCase().includes(filter)
+          );
+          renderTable(filteredData);
+        }
+      
+        document.getElementById('searchInput').addEventListener('input', searchTable);
+      
+        // Initial render
+        renderTable(headTeachers);
+      </script>
+ 
+</main>
+
+
+
+
+<!-- Footer -->
+<footer class="bg-[#b28449] text-[#ffffff]">
+    <div class="container mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-4 gap-12">
+            <div>
+                <img src="th.jpg" alt="School Logo" class="mb-6 h-28 w-28">
+                <p class="text-[#ffffff] mb-6">ST.Francis Senior Secondary School  is committed to providing quality education rooted in Christian values, fostering academic excellence and character development.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="bg-[#ffffff] p-2 rounded-full hover:bg-yellow-500 transition duration-300">
+                        <i class="fab fa-facebook-f text-[#ec1a23]"></i>
+                    </a>
+                    <a href="#" class="bg-[#ffffff] p-2 rounded-full hover:bg-yellow-500 transition duration-300">
+                        <i class="fab fa-twitter text-[#ec1a23]"></i>
+                    </a>
+                    <a href="#" class="bg-[#ffffff] p-2 rounded-full hover:bg-yellow-500 transition duration-300">
+                        <i class="fab fa-instagram text-[#ec1a23]"></i>
+                    </a>
+                    <a href="#" class="bg-[#ffffff] p-2 rounded-full hover:bg-yellow-500 transition duration-300">
+                        <i class="fab fa-youtube text-[#ec1a23]"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-3">
+                    <li><a href="#about" class="text-[#ffffff] hover:text-white transition duration-300">About Us</a></li>
+                    <li><a href="#admissions" class="text-[#ffffff] hover:text-white transition duration-300">Admissions</a></li>
+                    <li><a href="#academics" class="text-[#ffffff] hover:text-white transition duration-300">Academic Programs</a></li>
+                    <li><a href="#student-life" class="text-[#ffffff] hover:text-white transition duration-300">Student Life</a></li>
+                    <li><a href="#news" class="text-[#ffffff] hover:text-white transition duration-300">News &amp; Events</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-6">Contact Us</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-start space-x-3">
+                        <i class="fas fa-map-marker-alt mt-1 text-[#ffffff]"></i>
+                        <span class="text-[#ffffff]">P.O Box 123, Busunju, Uganda</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-phone text-[#ffffff]"></i>
+                        <span class="text-[#ffffff]">0393102946</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fas fa-envelope text-[#ffffff]"></i>
+                        <span class="text-[#ffffff]">stfrancis@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold mb-6">Newsletter</h4>
+                <p class="text-[#ffffff] mb-4">Subscribe to our newsletter for updates and news.</p>
+                <form class="space-y-4">
+                    <input type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded-lg bg-[#b28449] border border-[#ffffff] focus:outline-none focus:border-yellow-500 text-[#ffffff]">
+                    <button type="submit" class="w-full bg-[#ffffff] text-[#ec1a23] px-4 py-2 rounded-lg hover:bg-yellow-500 transition duration-300">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="border-t border-[#ffffff]">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-[#ffffff]">© 2025 ST.Francis Senior Secondary School Busunju. All rights reserved.</p>
+                <p class="text-[#ffffff]">Designed by Sseviiri Akram | 0756589660</p>
+                <p class="text-[#ffffff]">Developed by Aloisius Kasozi | 0704978132</p>
+            </div>
+        </div>
+    </div>
+    
+  </footer>
+
+
+
+
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Carousel
+      var cont=0;
+  function loopSlider(){
+    var xx= setInterval(function(){
+          switch(cont)
+          {
+          case 0:{
+              $("#slider-1").fadeOut(400);
+              $("#slider-2").delay(400).fadeIn(400);
+              $("#sButton1").removeClass("bg-purple-800");
+              $("#sButton2").addClass("bg-purple-800");
+          cont=1;
+          
+          break;
+          }
+          case 1:
+          {
+          
+              $("#slider-2").fadeOut(400);
+              $("#slider-1").delay(400).fadeIn(400);
+              $("#sButton2").removeClass("bg-purple-800");
+              $("#sButton1").addClass("bg-purple-800");
+             
+          cont=0;
+
+          break;
+          }
+          }},8000);
+  
+  }
+  
+  function reinitLoop(time){
+  clearInterval(xx);
+  setTimeout(loopSlider(),time);
+  }
+
+  function sliderButton1(){
+  
+      $("#slider-2").fadeOut(400);
+      $("#slider-1").delay(400).fadeIn(400);
+      $("#sButton2").removeClass("bg-purple-800");
+      $("#sButton1").addClass("bg-purple-800");
+      reinitLoop(4000);
+      cont=0
+      
+      }
+      
+      function sliderButton2(){
+      $("#slider-1").fadeOut(400);
+      $("#slider-2").delay(400).fadeIn(400);
+      $("#sButton1").removeClass("bg-purple-800");
+      $("#sButton2").addClass("bg-purple-800");
+      reinitLoop(4000);
+      cont=1
+      }
+  
+      $(window).ready(function(){
+          $("#slider-2").hide();
+          $("#sButton1").addClass("bg-purple-800");
+          loopSlider();
+      });
+    </script>
+
+<!-- Including Swiper JS -->
+ <!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  $(document).ready(function(){
+      $(".event-carousel").owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: true,
+          dots: true,
+          responsive:{
+              0:{
+                  items: 1
+              },
+              768:{
+                  items: 2
+              },
+              1024:{
+                  items: 3
+              }
+          },
+          navText: [
+              "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 19l-7-7 7-7' /></svg>",
+              "<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5l7 7-7 7' /></svg>"
+          ]
+      });
+  });
+</script>
+  </body>
+</html>
