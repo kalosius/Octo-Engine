@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
 
     <!-- component -->
 <div class="bg-gray-100">
@@ -101,5 +94,6 @@
     
 </div>
     
-</body>
-</html>
+
+
+{% endblock %}
