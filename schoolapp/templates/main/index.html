@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
 
 <!-- carousel items -->
@@ -9,7 +10,7 @@
                         <div class="block duration-700 ease-in-out absolute inset-0 transition-transform transform -translate-x-full z-10" data-carousel-item="">
                 <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
                 <!-- Adjusted Image for Brightness, Contrast, and Saturation -->
-                <img src="capuchinsisters.jpeg" class="absolute block w-full h-full object-cover object-center brightness-110 contrast-125 saturate-150 transition-transform duration-700 ease-in-out hover:scale-105" alt="Welcome to Mityana Secondary School">
+                <img src="{% static 'images/mainimages/capuchinsisters.jpeg' %}" class="absolute block w-full h-full object-cover object-center brightness-110 contrast-125 saturate-150 transition-transform duration-700 ease-in-out hover:scale-105" alt="Welcome to Mityana Secondary School">
                 <div class="absolute inset-0 flex items-center justify-center z-20">
                     <div class="text-center text-white px-4">
                         <h2 class="text-2xl md:text-2xl font-bold mb-4 animate-fadeIn shadow-text">Welcome to ST.Francis Senior Secondary School</h2>
@@ -20,7 +21,7 @@
                         <div class="duration-700 ease-in-out absolute inset-0 transition-transform transform translate-x-0 z-20" data-carousel-item="">
                 <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
                 <!-- Adjusted Image for Brightness, Contrast, and Saturation -->
-                <img src="capuchins.jpeg" class="absolute block w-full h-full object-cover object-center brightness-110 contrast-125 saturate-150 transition-transform duration-700 ease-in-out hover:scale-105" alt="State-of-the-Art Facilities">
+                <img src="{% static 'images/mainimages/capuchins.jpeg' %}" class="absolute block w-full h-full object-cover object-center brightness-110 contrast-125 saturate-150 transition-transform duration-700 ease-in-out hover:scale-105" alt="State-of-the-Art Facilities">
                 <div class="absolute inset-0 flex items-center justify-center z-20">
                     <div class="text-center text-white px-4">
                         <h2 class="text-2xl md:text-2xl font-bold mb-4 animate-fadeIn shadow-text">State-of-the-Art Facilities</h2>
@@ -31,7 +32,7 @@
                         <div class="duration-700 ease-in-out absolute inset-0 transition-transform transform z-10 translate-x-full" data-carousel-item="">
                 <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
                 <!-- Adjusted Image for Brightness, Contrast, and Saturation -->
-                <img src="quadrangle.jpeg" class="absolute block w-full h-full object-cover object-center brightness-110 contrast-125 saturate-150 transition-transform duration-700 ease-in-out hover:scale-105" alt="Diverse Student Body">
+                <img src="{% static 'images/mainimages/quadrangle.jpeg' %}" class="absolute block w-full h-full object-cover object-center brightness-110 contrast-125 saturate-150 transition-transform duration-700 ease-in-out hover:scale-105" alt="Diverse Student Body">
                 <div class="absolute inset-0 flex items-center justify-center z-20">
                     <div class="text-center text-white px-4">
                         <h2 class="text-2xl md:text-2xl font-bold mb-4 animate-fadeIn shadow-text">Diverse Student Body</h2>
@@ -114,7 +115,7 @@
                 <div class="absolute inset-0 flex items-center justify-center">
                 <div class="w-5/6 h-5/6 rounded-full overflow-hidden shadow-2xl transform transition-all duration-500 hover:scale-105 group">
                     <div class="w-full h-full rounded-full overflow-hidden">
-                    <img src="tochurch.jpeg" alt="Bowers Pillar" class="w-full h-full object-cover object-center transform transition-transform duration-500 group-hover:scale-110">
+                    <img src="{% static 'images/mainimages/tochurch.jpeg' %}" alt="Bowers Pillar" class="w-full h-full object-cover object-center transform transition-transform duration-500 group-hover:scale-110">
                     </div>
                 </div>
                 </div>
@@ -174,7 +175,7 @@
   <section class="py-16 bg-gradient-to-b from-white to-gray-100">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <a href="#academics" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 group border border-gray-200">
+            <a href="{% url 'unebperformance' %}" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 group border border-gray-200">
                 <div class="flex flex-col items-center text-center space-y-4">
                     <div class="bg-[#b28449] text-white p-4 rounded-full group-hover:bg-secondary group-hover:text-red-600 transition duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -187,7 +188,7 @@
                     </div>
                 </div>
             </a>
-            <a href="#games-and-sports" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 group border border-gray-200">
+            <a href="{% url 'gamesports' %}" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 group border border-gray-200">
                 <div class="flex flex-col items-center text-center space-y-4">
                     <div class="bg-[#b28449] text-white p-4 rounded-full group-hover:bg-secondary group-hover:text-red-600 transition duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -201,7 +202,7 @@
                     </div>
                 </div>
             </a>
-            <a href="#upcoming-events" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 group border border-gray-200">
+            <a href="{% url 'events' %}" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 group border border-gray-200">
                 <div class="flex flex-col items-center text-center space-y-4">
                     <div class="bg-[#b28449] text-white p-4 rounded-full group-hover:bg-secondary group-hover:text-red-600 transition duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -214,7 +215,7 @@
                     </div>
                 </div>
             </a>
-            <a href="#admission" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 group border border-gray-200">
+            <a href="{% url 'admissions' %}" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 group border border-gray-200">
                 <div class="flex flex-col items-center text-center space-y-4">
                     <div class="bg-[#b28449] text-white p-4 rounded-full group-hover:bg-secondary group-hover:text-red-600 transition duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -257,19 +258,19 @@
                         <p class="text-2xl font-bold text-accent">10+</p>
                     </div>
                 </div>
-                <a href="#history" class="inline-flex items-center text-[#b28449] font-medium hover:text-secondary transition duration-300">
+                <a href="{% url 'about' %}" class="inline-flex items-center text-[#b28449] font-medium hover:text-secondary transition duration-300">
                     Explore Our Rich Heritage
                     <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
             <div class="grid grid-cols-2 gap-4 animate-slideInFromRight">
                 <div class="space-y-4">
-                    <img src="capchunplanting.jpeg" alt="School Building" class="rounded-lg shadow-lg hover:shadow-xl transition duration-300 h-64 w-full object-cover">
-                    <img src="quadrangle_out.jpeg" alt="Library" class="rounded-lg shadow-lg hover:shadow-xl transition duration-300 h-64 w-full object-cover">
+                    <img src="{% static 'images/mainimages/capchunplanting.jpeg' %}" alt="School Building" class="rounded-lg shadow-lg hover:shadow-xl transition duration-300 h-64 w-full object-cover">
+                    <img src="{% static 'images/mainimages/quadrangle_out.jpeg' %}" alt="Library" class="rounded-lg shadow-lg hover:shadow-xl transition duration-300 h-64 w-full object-cover">
                 </div>
                 <div class="space-y-4">
-                    <img src="quadrangle.jpeg" alt="Students" class="rounded-lg shadow-lg hover:shadow-xl transition duration-300 h-64 w-full object-cover">
-                    <img src="bahati.jpg" alt="Campus" class="rounded-lg shadow-lg hover:shadow-xl transition duration-300 h-64 w-full object-cover">
+                    <img src="{% static 'images/mainimages/quadrangle.jpeg' %}" alt="Students" class="rounded-lg shadow-lg hover:shadow-xl transition duration-300 h-64 w-full object-cover">
+                    <img src="{% static 'images/mainimages/bahati.jpg' %}" alt="Campus" class="rounded-lg shadow-lg hover:shadow-xl transition duration-300 h-64 w-full object-cover">
                 </div>
             </div>   
         </div>        
@@ -429,7 +430,7 @@
             <div class="bg-gray-50 rounded-xl shadow-lg overflow-hidden">
                 <div class="flex flex-col md:flex-row">
                                         <div class="md:w-2/5">
-                        <img src="headteacher.jpg" alt="Head Teacher" class="w-full h-full object-cover">
+                        <img src="{% static 'images/mainimages/headteacher.jpg' %}" alt="Head Teacher" class="w-full h-full object-cover">
                     </div>
                                         
                     <div class="md:w-3/5 p-8 md:p-12">
@@ -464,7 +465,7 @@
             <div class="w-full md:w-2/5 bg-[#b28449] p-4 md:p-8 flex items-center justify-center">
                 <div class="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-indigo-300 shadow-lg">
                   <div class="absolute inset-0 bg-white shadow-inner"></div>
-                                    <img src="academic.jpg" alt="Academic Office" class="absolute inset-0 w-full h-full object-cover object-top">
+                                    <img src="{% static 'images/mainimages/academic.jpg' %}" alt="Academic Office" class="absolute inset-0 w-full h-full object-cover object-top">
                                     </div>
               </div>
           <div class="md:w-3/5 p-8 md:p-12">
@@ -644,7 +645,7 @@
                         <div class="relative mb-6">
                             <!-- Profile Image Container -->
                             <div class="w-48 h-48 mx-auto rounded-full overflow-hidden ring-4 ring-[#b28449]/20 group-hover:ring-[#b28449]/40 transition-all duration-300">
-                                <img src="headteacher.jpg" alt="Mr. Twahiirwa Edward class="w-full h-full object-cover object-top">
+                                <img src="{% static 'images/mainimages/headteacher.jpg' %}" alt="Mr. Twahiirwa Edward class="w-full h-full object-cover object-top">
                             </div>
                         </div>
                         <div class="text-center">
@@ -663,7 +664,7 @@
                         <div class="relative mb-6">
                             <!-- Profile Image Container -->
                             <div class="w-48 h-48 mx-auto rounded-full overflow-hidden ring-4 ring-[#b28449]/20 group-hover:ring-[#b28449]/40 transition-all duration-300">
-                                <img src="academic.jpg" alt="Mr. Katende" class="w-full h-full object-cover object-top">
+                                <img src="{% static 'images/mainimages/academic.jpg' %}" alt="Mr. Katende" class="w-full h-full object-cover object-top">
                             </div>
                         </div>
                         <div class="text-center">
@@ -682,7 +683,7 @@
                         <div class="relative mb-6">
                             <!-- Profile Image Container -->
                             <div class="w-48 h-48 mx-auto rounded-full overflow-hidden ring-4 ring-[#b28449]/20 group-hover:ring-[#b28449]/40 transition-all duration-300">
-                                <img src="auma.jpg" alt="Mrs.Josephine" class="w-full h-full object-cover object-top">
+                                <img src="{% static 'images/mainimages/auma.jpg' %}" alt="Mrs.Josephine" class="w-full h-full object-cover object-top">
                             </div>
                         </div>
                         <div class="text-center">
@@ -701,7 +702,7 @@
                         <div class="relative mb-6">
                             <!-- Profile Image Container -->
                             <div class="w-48 h-48 mx-auto rounded-full overflow-hidden ring-4 ring-[#b28449]/20 group-hover:ring-[#b28449]/40 transition-all duration-300">
-                                <img src="charles.jpg" alt="Fr. Charles" class="w-full h-full object-cover object-top">
+                                <img src="{% static 'images/mainimages/charles.jpg' %}" alt="Fr. Charles" class="w-full h-full object-cover object-top">
                             </div>
                         </div>
                         <div class="text-center">
@@ -742,7 +743,7 @@
                 <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50"></div>
             
                 <!-- High-Quality Image with Adjustments -->
-                <img src="capuchins.jpeg" alt="Board of Directors" class="object-cover w-full h-full brightness-110 contrast-125 saturate-150 transition-transform duration-700 ease-in-out hover:scale-105">
+                <img src="{% static 'images/mainimages/capuchins.jpeg' %}" alt="Board of Directors" class="object-cover w-full h-full brightness-110 contrast-125 saturate-150 transition-transform duration-700 ease-in-out hover:scale-105">
             
                 <!-- Custom Outer & Inner Shadow for Depth -->
                 <div class="absolute inset-0 shadow-[0_25px_60px_rgba(0,0,0,0.8)] shadow-inner"></div>

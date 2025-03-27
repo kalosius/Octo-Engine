@@ -306,7 +306,7 @@
       <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
           <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
               <a href="{% url 'home' %}" class="flex items-center">
-                  <img src="th.png" class="mr-3 h-12 sm:h-14" alt="School Logo">
+                  <img src="{% static 'images/mainimages/th.png' %}" class="mr-3 h-12 sm:h-14" alt="School Logo">
                   <div>
                       <span class="self-center text-sm font-semibold whitespace-nowrap text-[#b28449]">ST.Francis Senior Secondary School</span>
                       <p class="text-sm text-gray-600 italic">"Sapientia crucis</p>
@@ -411,7 +411,7 @@
     <div class="container mx-auto px-4 py-16">
         <div class="grid md:grid-cols-4 gap-12">
             <div>
-                <img src="th.jpg" alt="School Logo" class="mb-6 h-28 w-28">
+                <img src="{% static 'images/mainimages/th.jpg' %}" alt="School Logo" class="mb-6 h-28 w-28">
                 <p class="text-[#ffffff] mb-6">ST.Francis Senior Secondary School  is committed to providing quality education rooted in Christian values, fostering academic excellence and character development.</p>
                 <div class="flex space-x-4">
                     <a href="#" class="bg-[#ffffff] p-2 rounded-full hover:bg-yellow-500 transition duration-300">
