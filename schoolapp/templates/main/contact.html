@@ -11,6 +11,20 @@
     </div>
 </header>
 
+ <!-- Success Message -->
+ {% if messages %}
+ <div class="mb-4">
+     {% for message in messages %}
+     <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg relative" role="alert">
+         {{ message }}
+         <button type="button" class="absolute top-2 right-2 text-green-700 hover:text-green-900" onclick="this.parentElement.style.display='none';">
+             &times;
+         </button>
+     </div>
+     {% endfor %}
+ </div>
+ {% endif %}
+
 <!-- form -->
 <section class="bg-gray-100 py-16">
     <div class="container mx-auto px-4">
@@ -45,6 +59,21 @@
             <!-- Contact Form -->
             <div class="bg-white rounded-lg shadow-md p-8 border-t-4 border-[#b28449]">
                 <h2 class="text-2xl font-semibold mb-6 text-gray-800">Send us a Message</h2>
+                
+                <!-- Success Message -->
+                {% if messages %}
+                <div class="mb-4">
+                    {% for message in messages %}
+                    <div class="p-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg relative" role="alert">
+                        {{ message }}
+                        <button type="button" class="absolute top-2 right-2 text-green-700 hover:text-green-900" onclick="this.parentElement.style.display='none';">
+                            &times;
+                        </button>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                
                 <form action="{% url 'contact' %}" method="POST">
                     {% csrf_token %}
                     <div class="mb-4">

@@ -27,7 +27,7 @@ def contact(request):
         )
 
         # Display a success message
-        messages.success(request, 'Your message has been sent successfully!')
+        messages.success(request, 'Your message has been sent successfully! You will be contacted shortly.')
         return redirect('contact')  # Replace 'contact' with the name of your contact page URL pattern
 
     return render(request, 'main/contact.html')
