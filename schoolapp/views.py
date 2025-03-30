@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import ContactMessage
+from .forms import SeniorOneForm
+
 
 # Create your views here.
 def home(request):
@@ -55,4 +57,16 @@ def beststudents(request):
 
 def admissions(request):
     return render(request, 'main/admissions.html')
+
+
+
+def formoneregister(request):
+    if request.method == 'POST':
+        form = SeniorOneForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+        return render(request, 'auth/success.html')
+    else:
+        form = SeniorOneForm()
+    return render(request, 'auth/formoneregister.html', {'form': form})
 

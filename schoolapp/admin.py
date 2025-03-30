@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import ContactMessage
+from . models import ContactMessage, SeniorOne
 
 # Register your models here.
 class ContactMessageAdmin(admin.ModelAdmin):
@@ -9,3 +9,12 @@ class ContactMessageAdmin(admin.ModelAdmin):
     ordering = ('-created_at',) 
 
 admin.site.register(ContactMessage, ContactMessageAdmin)
+
+
+class SeniorOneAdmin(admin.ModelAdmin):
+    list_display = ('first_name', 'last_name', 'elective', 'sex', 'created_at')
+    search_fields = ('first_name', 'last_name', 'elective')
+    list_filter = ('sex', 'created_at')
+    ordering = ('-created_at',) 
+
+admin.site.register(SeniorOne, SeniorOneAdmin)
