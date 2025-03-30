@@ -8,179 +8,181 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-blue-50">
-    <div class="container mx-auto mt-10">
+<body class="bg-gradient-to-br from-[#b28449] via-[#d4a772] to-[#b28449] min-h-screen flex items-center justify-center">
+    <div class="container mx-auto mt-10 p-8 bg-gray-100 shadow-2xl rounded-lg max-w-4xl">
         <center>
             <div class="flex justify-center items-center">
-                <img src="https://stfranciss.netlify.app/th.png" alt="" class="w-24 h-24">
+                <img src="https://stfranciss.netlify.app/th.png" alt="School Logo" class="w-24 h-24 rounded-full shadow-lg">
                 <div class="ml-6 text-center">
-                    <h2 class="text-2xl font-bold">ST.Francis Senior Secondary School</h2>
-                    <p>Students Online Registration For S1</p>
+                    <h2 class="text-4xl font-extrabold text-[#b28449]">ST.Francis Senior Secondary School</h2>
+                    <p class="text-gray-700 text-lg">Students Online Registration For S1</p>
                 </div>
             </div>
         </center>
 
         <br>
-        <h5 class="text-lg font-semibold">Online Registration Form S1</h5><br>
-        <form id="registrationForm" method="POST" enctype="multipart/form-data" class="space-y-6">
+        <h5 class="text-2xl font-semibold text-[#b28449] text-center">Online Registration Form S1</h5><br>
+        <form id="registrationForm" method="POST" enctype="multipart/form-data" class="space-y-8">
             {% csrf_token %}
-            <h3 class="text-xl font-semibold">Personal Info</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <h3 class="text-xl font-semibold text-gray-800 border-b pb-2">Personal Info</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
-                    <label for="id_first_name" class="block font-medium">First Name</label>
-                    <input type="text" id="id_first_name" name="first_name" class="form-input mt-1 block w-full border-gray-300 rounded-md" placeholder="John" required>
+                    <label for="id_first_name" class="block font-medium text-gray-800">First Name</label>
+                    <input type="text" id="id_first_name" name="first_name" class="form-input mt-1 block w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="John" required>
                 </div>
                 <div>
-                    <label for="id_middle_name" class="block font-medium">Middle Name</label>
-                    <input type="text" id="id_middle_name" name="middle_name" class="form-input mt-1 block w-full border-gray-300 rounded-md" placeholder="Middle Name">
+                    <label for="id_middle_name" class="block font-medium text-gray-800">Middle Name</label>
+                    <input type="text" id="id_middle_name" name="middle_name" class="form-input mt-1 block w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Middle Name">
                 </div>
                 <div>
-                    <label for="id_last_name" class="block font-medium">Last Name</label>
-                    <input type="text" id="id_last_name" name="last_name" class="form-input mt-1 block w-full border-gray-300 rounded-md" placeholder="Last Name" required>
+                    <label for="id_last_name" class="block font-medium text-gray-800">Last Name</label>
+                    <input type="text" id="id_last_name" name="last_name" class="form-input mt-1 block w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500" placeholder="Last Name" required>
                 </div>
             </div>
-            <p class="text-red-500">Names should be filled in with the same orders as registered in UNEB</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <p class="text-sm text-red-600 mt-2">Names should be filled in with the same orders as registered in UNEB</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label for="id_reg_no" class="block font-medium">Registration Number</label>
+                    <label for="id_reg_no" class="block font-medium text-gray-800">Registration Number</label>
                     {{ form.reg_no }}
                 </div>
                 <div>
-                    <label for="id_emergency_contact" class="block font-medium">Emergency Contact</label>
+                    <label for="id_emergency_contact" class="block font-medium text-gray-800">Emergency Contact</label>
                     {{ form.emergency_contact }}
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
-                    <label for="id_sex" class="block font-medium">Sex</label>
+                    <label for="id_sex" class="block font-medium text-gray-800">Sex</label>
                     {{ form.sex }}
                 </div>
                 <div>
-                    <label for="id_status" class="block font-medium">Status</label>
+                    <label for="id_status" class="block font-medium text-gray-800">Status</label>
                     {{ form.status }}
                 </div>
                 <div>
-                    <label for="id_cls" class="block font-medium">Class</label>
+                    <label for="id_cls" class="block font-medium text-gray-800">Class</label>
                     {{ form.cls }}
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label for="id_elective" class="block font-medium">Elective</label>
+                    <label for="id_elective" class="block font-medium text-gray-800">Elective</label>
                     {{ form.elective }}
                 </div>
                 <div>
-                    <label for="id_date_of_birth" class="block font-medium">Date Of Birth</label>
-                    <input type="date" id="id_date_of_birth" name="date_of_birth" class="form-input mt-1 block w-full border-gray-300 rounded-md" required>
+                    <label for="id_date_of_birth" class="block font-medium text-gray-800">Date Of Birth</label>
+                    <input type="date" id="id_date_of_birth" name="date_of_birth" class="form-input mt-1 block w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500" required>
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label for="id_religion" class="block font-medium">Religion</label>
+                    <label for="id_religion" class="block font-medium text-gray-800">Religion</label>
                     {{ form.religion }}
                 </div>
                 <div>
-                    <label for="id_former_school" class="block font-medium">Former School</label>
+                    <label for="id_former_school" class="block font-medium text-gray-800">Former School</label>
                     {{ form.former_school }}
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label for="id_index_no" class="block font-medium">Index Number</label>
+                    <label for="id_index_no" class="block font-medium text-gray-800">Index Number</label>
                     {{ form.index_no }}
                 </div>
                 <div>
-                    <label for="id_hobbies" class="block font-medium">Hobbies</label>
+                    <label for="id_hobbies" class="block font-medium text-gray-800">Hobbies</label>
                     {{ form.hobbies }}
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label for="id_dream_profession" class="block font-medium">Dream Profession</label>
+                    <label for="id_dream_profession" class="block font-medium text-gray-800">Dream Profession</label>
                     {{ form.dream_profession }}
                 </div>
                 <div>
-                    <label for="id_nationality" class="block font-medium">Nationality</label>
+                    <label for="id_nationality" class="block font-medium text-gray-800">Nationality</label>
                     {{ form.nationality }}
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label for="id_student_nin" class="block font-medium">Student NIN</label>
+                    <label for="id_student_nin" class="block font-medium text-gray-800">Student NIN</label>
                     {{ form.student_nin }}
                 </div>
                 <div>
-                    <label for="id_student_lin" class="block font-medium">Student LIN</label>
+                    <label for="id_student_lin" class="block font-medium text-gray-800">Student LIN</label>
                     {{ form.student_lin }}
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label for="id_home_address" class="block font-medium">Home Address</label>
+                    <label for="id_home_address" class="block font-medium text-gray-800">Home Address</label>
                     {{ form.home_address }}
                 </div>
                 <div>
-                    <label for="id_district" class="block font-medium">District</label>
+                    <label for="id_district" class="block font-medium text-gray-800">District</label>
                     {{ form.district }}
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label for="id_city" class="block font-medium">City</label>
+                    <label for="id_city" class="block font-medium text-gray-800">City</label>
                     {{ form.city }}
                 </div>
                 <div>
-                    <label for="id_country" class="block font-medium">Country</label>
+                    <label for="id_country" class="block font-medium text-gray-800">Country</label>
                     {{ form.country }}
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label for="id_special_needs" class="block font-medium">Special Needs</label>
+                    <label for="id_special_needs" class="block font-medium text-gray-800">Special Needs</label>
                     {{ form.special_needs }}
                 </div>
                 <div>
-                    <label for="id_medical_history" class="block font-medium">Medical History</label>
+                    <label for="id_medical_history" class="block font-medium text-gray-800">Medical History</label>
                     {{ form.medical_history }}
                 </div>
             </div>
 
-            <h3 class="text-xl font-semibold">Academic Results</h3>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <h3 class="text-xl font-semibold text-gray-800 border-b pb-2">Academic Results</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <div>
-                    <label for="id_english" class="block font-medium">English</label>
+                    <label for="id_english" class="block font-medium text-gray-800">English</label>
                     {{ form.english }}
                 </div>
                 <div>
-                    <label for="id_mathematics" class="block font-medium">Mathematics</label>
+                    <label for="id_mathematics" class="block font-medium text-gray-800">Mathematics</label>
                     {{ form.mathematics }}
                 </div>
                 <div>
-                    <label for="id_social_studies" class="block font-medium">Social Studies</label>
+                    <label for="id_social_studies" class="block font-medium text-gray-800">Social Studies</label>
                     {{ form.social_studies }}
                 </div>
                 <div>
-                    <label for="id_science" class="block font-medium">Science</label>
+                    <label for="id_science" class="block font-medium text-gray-800">Science</label>
                     {{ form.science }}
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label for="id_aggregates" class="block font-medium">Aggregates</label>
+                    <label for="id_aggregates" class="block font-medium text-gray-800">Aggregates</label>
                     {{ form.aggregates }}
                 </div>
                 <div>
-                    <label for="id_division" class="block font-medium">Division</label>
+                    <label for="id_division" class="block font-medium text-gray-800">Division</label>
                     {{ form.division }}
                 </div>
             </div>
             <div>
-                <label for="id_results_photo" class="block font-medium">Results Photo</label>
+                <label for="id_results_photo" class="block font-medium text-gray-800">Results Photo</label>
                 {{ form.results_photo }}
             </div>
            
-            <h6 class="text-red-500">NB: Dear Applicant, when reporting to school carry along 2 pairs of decent black trousers(boys) or 2 black decent skirts(girls) and 2 white T-shirts as you wait to receive the school uniform</h6>
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Submit</button>
+            <h6 class="text-sm text-red-600 mt-4 text-center">NB: Dear Applicant, when reporting to school carry along 2 pairs of decent black trousers (boys) or 2 black decent skirts (girls) and 2 white T-shirts as you wait to receive the school uniform</h6>
+            <div class="flex justify-center">
+                <button type="submit" class="bg-[#b28449] text-white px-8 py-3 rounded-lg shadow-lg hover:bg-[#b28449] focus:ring-4 focus:ring-blue-400 focus:ring-opacity-50">Submit</button>
+            </div>
         </form>
         <br><br><br>
     </div>
