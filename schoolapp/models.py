@@ -149,7 +149,6 @@ class SeniorOne(models.Model):
     division = models.CharField(max_length=1, choices=DIVISION_CHOICES, verbose_name="Division")
     
     results_photo = models.ImageField(upload_to='results_photos', verbose_name="Results Photo")
-    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"

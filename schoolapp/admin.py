@@ -12,9 +12,9 @@ admin.site.register(ContactMessage, ContactMessageAdmin)
 
 
 class SeniorOneAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'elective', 'sex', 'created_at')
+    list_display = ('first_name', 'last_name', 'elective', 'sex')
     search_fields = ('first_name', 'last_name', 'elective')
-    list_filter = ('sex', 'created_at')
-    ordering = ('-created_at',) 
+    list_filter = ('sex', 'first_name', 'last_name')
+    ordering = ('-first_name',) 
 
 admin.site.register(SeniorOne, SeniorOneAdmin)
