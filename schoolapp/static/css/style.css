@@ -1,0 +1,21 @@
+.ourpartners {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.animate-slide {
+    display: flex;
+    animation: slide-left 10s linear infinite;
+}
+@keyframes slide-left {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
