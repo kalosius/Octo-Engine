@@ -140,3 +140,15 @@ CACHES = {
 # Optional: Use Redis for session storage
 # SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 # SESSION_CACHE_ALIAS = 'default'
+
+
+
+
+# Production Email settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # Replace with your SMTP server (e.g., Gmail, Outlook, etc.)
+EMAIL_PORT = 587  # Use 587 for TLS or 465 for SSL
+EMAIL_USE_TLS = True  # Set to True for TLS (or EMAIL_USE_SSL = True for SSL)
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')  # Replace with your email address
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')  # Replace with your email password or app-specific password
+DEFAULT_FROM_EMAIL = 'aloisiuskasozi@gmail.com'  # Replace with your email address

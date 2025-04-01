@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.core.mail import send_mail, EmailMessage
+from django.conf import settings
 from .models import ContactMessage
 from .forms import SeniorOneForm
 
@@ -27,6 +29,22 @@ def contact(request):
             preferred_method=preferred_method,
             message=message
         )
+
+        # Configure email backend for production
+        settings.EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+        # Send an email to the admin
+        admin_email = "aloisiuskasozi@gmail.com"
+        subject = "New Contact Message"
+        email_message = f"""
+        You have received a new contact message:
+        Name: {name}
+        Email: {email}
+        Phone: {phone}
+        Preferred Contact Method: {preferred_method}
+        Message: {message}
+        """
+        send_mail(subject, email_message, settings.DEFAULT_FROM_EMAIL, [admin_email])
 
         # Display a success message
         messages.success(request, 'Your message has been sent successfully! You will be contacted shortly.')
