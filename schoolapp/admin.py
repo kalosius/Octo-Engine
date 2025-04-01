@@ -18,3 +18,12 @@ class SeniorOneAdmin(admin.ModelAdmin):
     ordering = ('-first_name',) 
 
 admin.site.register(SeniorOne, SeniorOneAdmin)
+
+
+
+
+
+# Customize the admin site
+admin.site.site_header = "ST.Francis School Admin"
+admin.site.site_title = "ST.Francis Admin Portal"
+admin.site.index_title = "Welcome to ST.Francis Administration"
