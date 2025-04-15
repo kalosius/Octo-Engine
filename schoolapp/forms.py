@@ -5,3 +5,7 @@ class SeniorOneForm(forms.ModelForm):
     class Meta:
         model = SeniorOne
         fields = '__all__'
+        
+        
+
+        
