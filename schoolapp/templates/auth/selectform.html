@@ -1,40 +1,41 @@
 {% extends 'base.html' %}
 {% block content %}
+<style>
+    footer {
+        display: none;
+    }
+    
+    
+    
+</style>
 
 <main class="container mx-auto px-4 py-12">
     <div class="space-y-6">
-        <p class="text-lg font-semibold">Select Form:</p>
-        <h1 class="text-lg font-semibold">Ordinary Level Registration</h1>
+        <p class="text-lg font-semibold text-[#b28449]">Select Form To Proceed:</p>
+        <h1 class="text-lg font-semibold text-[#b28449]">Ordinary Level Registration</h1>
     
         <input type="hidden" id="formInput">
-    
+
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="formCards">
-            <div data-value="1" class="form-card cursor-pointer rounded-xl border p-4 text-center shadow hover:bg-blue-50 transition">
-                <h3 class="text-xl font-bold">Form 1</h3>
-                <p class="mt-2 text-sm text-gray-600">This is the description for Form 1. Choose this if you're just starting out.</p>
+            <div data-value="1" class="form-card cursor-pointer rounded-xl border p-4 text-center shadow hover:bg-[#f0d8b0] transition">
+                <h3 class="text-xl font-bold ">Senior One</h3>
+                <p class="mt-2 text-sm text-gray-600">This is the description for Senior One. Choose this if you're just starting out.</p>
             </div>
-            <div data-value="2" class="form-card cursor-pointer rounded-xl border p-4 text-center shadow hover:bg-blue-50 transition">
-                <h3 class="text-xl font-bold">Form 2</h3>
+            <div data-value="2" class="form-card cursor-pointer rounded-xl border p-4 text-center shadow hover:bg-[#f0d8b0] transition">
+                <h3 class="text-xl font-bold">Senior Two - Senior Four</h3>
                 <p class="mt-2 text-sm text-gray-600">Form 2 is for intermediate learners. Continue your journey here.</p>
-            </div>
-            <div data-value="3" class="form-card cursor-pointer rounded-xl border p-4 text-center shadow hover:bg-blue-50 transition">
-                <h3 class="text-xl font-bold">Form 3</h3>
-                <p class="mt-2 text-sm text-gray-600">Form 3 covers advanced topics. Get ready for deeper challenges.</p>
-            </div>
-            <div data-value="4" class="form-card cursor-pointer rounded-xl border p-4 text-center shadow hover:bg-blue-50 transition">
-                <h3 class="text-xl font-bold">Form 4</h3>
-                <p class="mt-2 text-sm text-gray-600">Form 4 is the final level. Perfect for exam preparation.</p>
-            </div>
+            </div> 
         </div>
 
         <!-- Advanced Level -->
-        <h1 class="text-lg font-semibold">Advanced Level Registration</h1>
-        <div data-value="1" class="form-card cursor-pointer rounded-xl border p-4 text-center shadow hover:bg-blue-50 transition">
+         
+        <h1 class="text-lg font-semibold text-[#b28449]">Advanced Level Registration</h1>
+        <div data-value="1" class="form-card cursor-pointer rounded-xl border p-4 text-center shadow hover:bg-[#f0d8b0] transition">
             <h3 class="text-xl font-bold">Senior Five</h3>
             <p class="mt-2 text-sm text-gray-600">This is the description for Form 1. Choose this if you're just starting out.</p>
         </div>
-        <div data-value="2" class="form-card cursor-pointer rounded-xl border p-4 text-center shadow hover:bg-blue-50 transition">
-            <h3 class="text-xl font-bold">Form 2</h3>
+        <div data-value="2" class="form-card cursor-pointer rounded-xl border p-4 text-center shadow hover:bg-[#f0d8b0] transition">
+            <h3 class="text-xl font-bold">Senior Six</h3>
             <p class="mt-2 text-sm text-gray-600">Form 2 is for intermediate learners. Continue your journey here.</p>
         </div>
     </div>
@@ -45,8 +46,8 @@
     
         cards.forEach(card => {
             card.addEventListener('click', () => {
-                cards.forEach(c => c.classList.remove('border-blue-600', 'bg-blue-100'));
-                card.classList.add('border-blue-600', 'bg-blue-100');
+                cards.forEach(c => c.classList.remove('border-[#b28449]', 'bg-[#b28449]'));
+                card.classList.add('border-[#b28449]', 'bg-[#b28449]');
                 input.value = card.getAttribute('data-value');
                 console.log("Selected form:", input.value); // You can use this value as needed
             });
