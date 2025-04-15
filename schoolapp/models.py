@@ -50,13 +50,7 @@ class SeniorOne(models.Model):
     ]
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, verbose_name="Status")
     
-    CLASS_CHOICES = [
-        ('Senior One', 'Senior One'),
-        ('Senior Two', 'Senior Two'),
-        ('Senior Three', 'Senior Three'),
-        ('Senior Four', 'Senior Four'),
-    ]
-    cls = models.CharField(max_length=20, choices=CLASS_CHOICES, verbose_name="Class")
+   
     
     ELECTIVE_CHOICES = [
         ('ICT', 'ICT'),
