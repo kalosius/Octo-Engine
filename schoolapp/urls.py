@@ -16,6 +16,7 @@ urlpatterns = [
     path('beststudents/', views.beststudents, name='beststudents'),
     path('admissions/', views.admissions, name='admissions'),
     path('seniorone/auth/register', views.formoneregister, name='formoneregister'),
+    path('select-form/', views.select_form, name='selectform'),
 ]
 
 # Images to load in the browser

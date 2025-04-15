@@ -7,6 +7,10 @@ from .forms import SeniorOneForm
 
 
 # Create your views here.
+def select_form(request):
+    return render(request, 'auth/selectform.html')
+
+
 def home(request):
     return render(request, 'main/index.html')
 
