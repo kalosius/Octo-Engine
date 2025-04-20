@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',  # Add this before 'django.contrib.staticfiles'
     'django.contrib.staticfiles',
     'schoolapp',
-    'payment',
 ]
 
 MIDDLEWARE = [
