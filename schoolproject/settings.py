@@ -5,6 +5,8 @@ import dj_database_url
 # Load environment variables from .env file
 load_dotenv()
 
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -32,6 +34,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',  # Add this before 'django.contrib.staticfiles'
     'django.contrib.staticfiles',
     'schoolapp',
+    'payment',
 ]
 
 MIDDLEWARE = [
@@ -72,7 +75,6 @@ WSGI_APPLICATION = 'schoolproject.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'), conn_max_age=600, ssl_require=True)
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -152,3 +154,14 @@ EMAIL_USE_TLS = True  # Set to True for TLS (or EMAIL_USE_SSL = True for SSL)
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')  # Replace with your email address
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')  # Replace with your email password or app-specific password
 DEFAULT_FROM_EMAIL = 'aloisiuskasozi@gmail.com'  # Replace with your email address
+
+
+
+
+# Mtn Integration
+
+MTN_API_KEY = os.getenv("MTN_API_KEY")
+MTN_SUBSCRIPTION_KEY = os.getenv("MTN_SUBSCRIPTION_KEY")
+MTN_USER_ID = os.getenv("MTN_USER_ID")
+MTN_CALLBACK_URL = os.getenv("MTN_CALLBACK_URL")
+MTN_ENVIRONMENT = os.getenv("MTN_ENVIRONMENT")
