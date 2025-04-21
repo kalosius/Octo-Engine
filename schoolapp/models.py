@@ -16,7 +16,6 @@ class ContactMessage(models.Model):
 
 # Choices for academic results
 # Assuming the results are represented as strings '1' to '9' for grades
-
 RESULT_CHOICES = (
     ('1', '1'),
     ('2', '2'),
@@ -143,6 +142,49 @@ class SeniorOne(models.Model):
     division = models.CharField(max_length=1, choices=DIVISION_CHOICES, verbose_name="Division")
     
     results_photo = models.ImageField(upload_to='results_photos', verbose_name="Results Photo")
+
+
+
+    # Parents /Guardians
+    # father's status radio buttons alive or deceased
+    father_status = models.CharField(max_length=10, choices=[('Alive', 'Alive'), ('Deceased', 'Deceased')], verbose_name="Father's Status")
+    father_name = models.CharField(max_length=100, verbose_name="Father's Name")
+    father_contact = models.CharField(max_length=15, verbose_name="Father's Contact")
+    father_second_contact = models.CharField(max_length=15, verbose_name="Father's Second Contact", blank=True, null=True)
+    father_nin = models.CharField(max_length=14, verbose_name="Father's NIN", blank=True, null=True)
+    father_email = models.EmailField(verbose_name="Father's Email", blank=True, null=True)
+    father_occupation = models.CharField(max_length=100, verbose_name="Father's Occupation", blank=True, null=True)
+    father_address = models.CharField(max_length=100, verbose_name="Father's Address", blank=True, null=True)
+
+    # mother's status radio buttons alive or deceased
+    mother_status = models.CharField(max_length=10, choices=[('Alive', 'Alive'), ('Deceased', 'Deceased')], verbose_name="Mother's Status")
+    mother_name = models.CharField(max_length=100, verbose_name="Mother's Name")
+    mother_contact = models.CharField(max_length=15, verbose_name="Mother's Contact")
+    mother_second_contact = models.CharField(max_length=15, verbose_name="Mother's Second Contact", blank=True, null=True)
+    mother_nin = models.CharField(max_length=14, verbose_name="Mother's NIN", blank=True, null=True)
+    mother_email = models.EmailField(verbose_name="Mother's Email", blank=True, null=True)
+    mother_occupation = models.CharField(max_length=100, verbose_name="Mother's Occupation", blank=True, null=True)
+    mother_address = models.CharField(max_length=100, verbose_name="Mother's Address", blank=True, null=True)
+
+    # guardian's 
+    guardian_name = models.CharField(max_length=100, verbose_name="Guardian's Name")
+    guardian_contact = models.CharField(max_length=15, verbose_name="Guardian's Contact")
+    guardian_second_contact = models.CharField(max_length=15, verbose_name="Guardian's Second Contact", blank=True, null=True)
+    guardian_relationship = models.CharField(max_length=100, verbose_name="Guardian's Relationship")
+    guardian_nin = models.CharField(max_length=14, verbose_name="Guardian's NIN", blank=True, null=True)
+    guardian_email = models.EmailField(verbose_name="Guardian's Email", blank=True, null=True)
+    guardian_occupation = models.CharField(max_length=100, verbose_name="Guardian's Occupation", blank=True, null=True)
+    guardian_address = models.CharField(max_length=100, verbose_name="Guardian's Address", blank=True, null=True)
+
+    # Emergency contact or next of kin * compulsory
+    nok_name = models.CharField(max_length=100, verbose_name="Next of Kin Name")
+    nok_contact = models.CharField(max_length=15, verbose_name="Next of Kin Contact")
+    nok_relationship = models.CharField(max_length=100, verbose_name="Next of Kin Relationship")
+    nok_nin = models.CharField(max_length=14, verbose_name="Next of Kin NIN", blank=True, null=True)
+    nok_email = models.EmailField(verbose_name="Next of Kin Email", blank=True, null=True)
+    nok_occupation = models.CharField(max_length=100, verbose_name="Next of Kin Occupation", blank=True, null=True)
+    nok_address = models.CharField(max_length=100, verbose_name="Next of Kin Address", blank=True, null=True)
+
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"

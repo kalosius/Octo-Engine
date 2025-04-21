@@ -186,7 +186,163 @@
                 <label for="id_results_photo" class="block font-medium text-gray-800">Results Photo</label>
                 {{ form.results_photo }}
             </div>
+
+            <br><br>
+            <!-- Parents/Guardians -->
+            <h3 class="text-xl font-semibold text-[#b28449] border-b pb-2">Parents / Guardians</h3>
+            <!-- father deatails fro the model -->
+            <h3 class="text-xl font-semibold text-[#b28449] border-b pb-2 ">Father's Details</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="id_father_status" class="block font-medium text-gray-800">Father's Status</label>
+                    {{ form.father_status }}
+                </div>      
+                <div>
+                    <label for="id_father_name" class="block font-medium text-gray-800">Father's Name</label>
+                    {{ form.father_name }}
+                </div>      
+                <div>
+                    <label for="id_father_contact" class="block font-medium text-gray-800">Father's Contact</label>
+                    {{ form.father_contact }}
+                </div>
+                <div>
+                    <label for="id_father_second_contact" class="block font-medium text-gray-800">Second Contact</label>
+                    {{ form.father_second_contact }}
+                </div>
+                <div>
+                    <label for="id_father_nin" class="block font-medium text-gray-800">Father's NIN</label>
+                    {{ form.father_nin }}
+                </div>
+                <div>
+                    <label for="id_father_email" class="block font-medium text-gray-800">Father's Email</label>
+                    {{ form.father_email }}
+                </div>
+                <div>
+                    <label for="id_father_occupation" class="block font-medium text-gray-800">Father's Occupation</label>
+                    {{ form.father_occupation }}
+                </div>
+                <div>
+                    <label for="id_father_address" class="block font-medium text-gray-800">Father's Address</label>
+                    {{ form.father_address }}
+                </div>
+            </div>
+
+
+            <br><br>
+            <!-- mother details from the model -->
+            <h3 class="text-xl font-semibold text-[#b28449] border-b pb-2 ">Mother's Details</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="id_mother_status" class="block font-medium text-gray-800">Mother's Status</label>
+                    {{ form.mother_status }}
+                </div>
+                <div>
+                    <label for="id_mother_name" class="block font-medium text-gray-800">Mother's Name</label>
+                    {{ form.mother_name }}
+                </div>
+                <div>
+                    <label for="id_mother_contact" class="block font-medium text-gray-800">Mother's Contact</label>
+                    {{ form.mother_contact }}
+                </div> 
+                <div>
+                    <label for="id_mother_second_contact" class="block font-medium text-gray-800">Second Contact</label>
+                    {{ form.mother_second_contact }}
+                </div> 
+                <div>
+                    <label for="id_mother_nin" class="block font-medium text-gray-800">Mother's NIN</label>
+                    {{ form.mother_nin }}
+                </div> 
+                <div>
+                    <label for="id_mother_email" class="block font-medium text-gray-800">Mother's Email</label>
+                    {{ form.mother_email }}
+                </div> 
+                <div>
+                    <label for="id_mother_occupation" class="block font-medium text-gray-800">Mother's Occupation</label>
+                    {{ form.mother_occupation }}
+                </div> 
+                <div>
+                    <label for="id_mother_address" class="block font-medium text-gray-800">Mother's Address</label>
+                    {{ form.mother_address }}
+                </div> 
+            </div>
+
+            <br><br>
+            <!-- guardian details from the model -->
+            <h3 class="text-xl font-semibold text-[#b28449] border-b pb-2 ">Guardian</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="id_guardian_name" class="block font-medium text-gray-800">Guardian's Name</label>
+                    {{ form.guardian_name }}
+                </div>
+                <div>
+                    <label for="id_guardian_contact" class="block font-medium text-gray-800">Guardian's Contact</label>
+                    {{ form.guardian_contact }}
+                </div>
+                <div>
+                    <label for="id_guardian_second_contact" class="block font-medium text-gray-800">Second Contact</label>
+                    {{ form.guardian_second_contact }}
+                </div>
+        
+                <div>
+                    <label for="id_guardian_relationship" class="block font-medium text-gray-800">Guardian's Relationship</label>
+                    {{ form.guardian_relationship }}
+                </div>
+                <div>
+                    <label for="id_guardian_nin" class="block font-medium text-gray-800">Guardian's NIN</label>
+                    {{ form.guardian_nin }}
+                </div>
+                <div>
+                    <label for="id_guardian_address" class="block font-medium text-gray-800">Guardian's Address</label>
+                    {{ form.guardian_address }}
+                </div>
+                <div>
+                    <label for="id_guardian_occupation" class="block font-medium text-gray-800">Guardian's Occupation</label>
+                    {{ form.guardian_occupation }}
+                </div>
+            </div>
+
+            <br><br>
+            <!-- Next of kin -->
+            <h3 class="text-xl font-semibold text-[#b28449] border-b pb-2 ">Next of Kin</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="id_nok_name" class="block font-medium text-gray-800">Next of Kin's Name</label>
+                    {{ form.nok_name }}
+                </div>
+                <div>
+                    <label for="id_nok_contact" class="block font-medium text-gray-800">Next of Kin's Contact</label>
+                    {{ form.nok_contact }}
+                </div>
+                <div>
+                    <label for="id_nok_relationship" class="block font-medium text-gray-800">Next of Kin's Relationship</label>
+                    {{ form.nok_relationship }}
+                </div>
+                <div>
+                    <label for="id_nok_nin" class="block font-medium text-gray-800">Next of Kin's NIN</label>
+                    {{ form.nok_nin }}
+                </div>
+                <div>
+                    <label for="id_nok_email" class="block font-medium text-gray-800">Next of Kin's Email</label>
+                    {{ form.nok_email }}
+                </div>
+                <div>
+                    <label for="id_nok_occupation" class="block font-medium text-gray-800">Next of Kin's Occupation</label>
+                    {{ form.nok_occupation }}
+                </div>
+                <div>
+                    <label for="id_nok_address" class="block font-medium text-gray-800">Next of Kin's Address</label>
+                    {{ form.nok_address }}
+                </div>
+            </div>
+                
+                
+
            
+            
+            <!-- Submission Buttons -->
             <h6 class="text-sm text-red-600 mt-4 text-center">NB: Dear Applicant, when reporting to school carry along 2 pairs of decent black trousers (boys) or 2 black decent skirts (girls) and 2 white T-shirts as you wait to receive the school uniform</h6>
             <div class="flex justify-center space-x-4">
                 <iframe width="200" height="40" src="https://store.pesapal.com/embed-code?pageUrl=https://store.pesapal.com/studentsregistrationform" frameborder="0" allowfullscreen></iframe>
