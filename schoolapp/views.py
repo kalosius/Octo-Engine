@@ -91,3 +91,44 @@ def formoneregister(request):
         form = SeniorOneForm()
     return render(request, 'auth/formoneregister.html', {'form': form})
 
+
+
+# PESApal IPN
+# views.py
+from django.http import HttpResponse, JsonResponse
+import requests
+
+def pesapal_ipn_listener(request):
+    tracking_id = request.GET.get('pesapal_transaction_tracking_id')
+    merchant_reference = request.GET.get('pesapal_merchant_reference')
+
+    if not tracking_id or not merchant_reference:
+        return JsonResponse({'error': 'Missing required parameters'}, status=400)
+
+    # Verify with Pesapal API
+    url = f"https://cybqa.pesapal.com/pesapalv3/api/QueryPaymentStatus?orderTrackingId={tracking_id}"
+    headers = {'Authorization': 'Bearer YOUR_ACCESS_TOKEN'}  # Replace with a valid OAuth token
+
+    try:
+        res = requests.get(url, headers=headers)
+        res.raise_for_status()  # Raise an HTTPError for bad responses (4xx and 5xx)
+        response_data = res.json()
+    except requests.exceptions.RequestException as e:
+        return JsonResponse({'error': 'Failed to connect to Pesapal API', 'details': str(e)}, status=500)
+    except ValueError:
+        return JsonResponse({'error': 'Invalid JSON response from Pesapal API'}, status=500)
+
+    payment_status = response_data.get("payment_status")
+
+    if payment_status == "COMPLETED":
+        # Update your database to mark the order as paid
+        # Example: Payment.objects.filter(reference=merchant_reference).update(status='PAID')
+        pass
+    elif payment_status == "FAILED":
+        # Handle failed payment
+        pass
+    elif payment_status == "PENDING":
+        # Handle pending payment
+        pass
+
+    return HttpResponse("IPN Received")

@@ -10,6 +10,14 @@
     nav{
         display: none;
     }
+
+    .alo-dis{
+        display: none;
+    }
+
+    body{
+        background-color: #F7F7F7;
+    }
 </style>
     
     <div class="container mx-auto mt-10 p-8 bg-gray-100 shadow-2xl rounded-lg max-w-4xl">
@@ -17,7 +25,7 @@
             <div class="flex justify-center items-center">
                 <img src="https://stfranciss.netlify.app/th.png" alt="School Logo" class="w-24 h-24 rounded-full shadow-lg">
                 <div class="ml-6 text-center">
-                    <h2 class="text-4xl font-extrabold text-[#b28449]">ST.Francis Senior Secondary School</h2>
+                    <h2 class="text-4xl font-extrabold text-[#b28449]">ST.Francis Senior Secondary School</h2><br>
                     <p class="text-gray-700 text-lg">Students Online Registration For S1</p>
                 </div>
             </div>
@@ -27,7 +35,7 @@
         <h5 class="text-2xl font-semibold text-[#b28449] text-center">Online Registration Form S1</h5><br>
         <form id="registrationForm" method="POST" enctype="multipart/form-data" class="space-y-8">
             {% csrf_token %}
-            <h3 class="text-xl font-semibold text-gray-800 border-b pb-2">Personal Info</h3>
+            <h3 class="text-xl font-semibold text-[#b28449] border-b pb-2">Personal Info</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
                     <label for="id_first_name" class="block font-medium text-gray-800">First Name</label>
@@ -145,7 +153,7 @@
                 </div>
             </div>
 
-            <h3 class="text-xl font-semibold text-gray-800 border-b pb-2">Academic Results</h3>
+            <h3 class="text-xl font-semibold text-[#b28449] border-b pb-2">Academic Results</h3>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <div>
                     <label for="id_english" class="block font-medium text-gray-800">English</label>
@@ -180,12 +188,14 @@
             </div>
            
             <h6 class="text-sm text-red-600 mt-4 text-center">NB: Dear Applicant, when reporting to school carry along 2 pairs of decent black trousers (boys) or 2 black decent skirts (girls) and 2 white T-shirts as you wait to receive the school uniform</h6>
-            <div class="flex justify-center">
+            <div class="flex justify-center space-x-4">
+                <iframe width="200" height="40" src="https://store.pesapal.com/embed-code?pageUrl=https://store.pesapal.com/studentsregistrationform" frameborder="0" allowfullscreen></iframe>
+            
                 <button type="submit" class="bg-[#b28449] text-white px-8 py-3 rounded-lg shadow-lg hover:bg-[#b28449] focus:ring-4 focus:ring-blue-400 focus:ring-opacity-50">Submit</button>
             </div>
+            
         </form>
         <br><br>
-        <iframe width="200" height="40" src="https://store.pesapal.com/embed-code?pageUrl=https://store.pesapal.com/studentsregistrationform" frameborder="0" allowfullscreen></iframe>
         <br><br><br>
     </div>
 
