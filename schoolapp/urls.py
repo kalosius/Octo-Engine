@@ -21,7 +21,8 @@ urlpatterns = [
     path('admissions/', views.admissions, name='admissions'),
     path('seniorone/auth/register', views.formoneregister, name='formoneregister'),
     path('select-form/', views.select_form, name='selectform'),
-    path('payment/ipn/', views.pesapal_ipn_listener, name='pesapal_ipn'),
+    path('payment/ipn/', views.payment_ipn, name='payment_ipn'),
+    path('payment/redirect/', views.payment_redirect, name='payment_redirect'),
 
 
 ]

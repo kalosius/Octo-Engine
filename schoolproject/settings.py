@@ -21,6 +21,11 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'your_default_secret_key')
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = [
+    'https://364d-41-75-182-131.ngrok-free.app',
+    'https://stfranciss.onrender.com/'
+]
+
 
 
 # Application definition
